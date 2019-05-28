@@ -1,0 +1,13 @@
+<h1><%= @billboard.chart %></h1>
+
+<div id="songs">
+  <h1>Songs</h1>
+  <% @billboard.songs.each do |song| %>
+    <%= render @billboard.songs %>
+    <% end %>
+    <h2>Add a Song</h2>
+    <%= render partial: "songs/form", locals: {song: @billboard.songs.new} %>
+    
+</div>
+
+<%= link_to 'Back', billboards_path %>
