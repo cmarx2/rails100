@@ -1,0 +1,6 @@
+<%= form_for [@song, @artist] do |f| %>
+  <%= f.label :artist %>
+ <%= f.text_field :artist, autofocus: true %>
+ <br />
+ <%= f.submit %>
+<% end %>

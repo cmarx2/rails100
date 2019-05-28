@@ -2,7 +2,7 @@
 
 <ul>
 <% @songs.each do |song| %>
-  <li><strong><%= song.rank %></strong> <%= link_to song.title, [@billboard, @song] %> 
+  <li><strong><%= song.rank %></strong> <%= link_to song.title, [@billboard, song] %> 
   </li>
   <% end %> 
   </ul>
