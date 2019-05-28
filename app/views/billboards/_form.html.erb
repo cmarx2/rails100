@@ -1,10 +1,8 @@
+<h1><%= @billboard.id ? 'Edit Chart' : 'Create Chart' %></h1>
 <%= form_for(@billboard) do |f| %>
   <div class="field">
     <%= f.label :chart %>
-    <%= f.text_field :chart %>
-  </div>  
-  
-  <div>
+    <%= f.text_field :chart, required: true, autofocus: true %>
     <%= f.submit %>
   </div>
 <% end %>

@@ -1,5 +1,9 @@
-<h1><%= @billboard.name %> - <%= @song.name %></h1>
+<h1><%= @billboard.chart %> - <%= @song.title %></h1>
+
+<p><%= @song.rank%>. <%= @song.title %>
 
 <%= link_to 'Edit Song', edit_billboard_song_path([@billboard, @song]) %>
-<%= link_to 'Delete Song', [@billboard, @song], method: :delete %>
-<%= link_to 'Back To Charts', billboard_song_path(@billboard) %>
+
+<%= link_to 'Delete Song, [@billboard, @song], method: :delete %>
+
+<%= link_to 'Back To Songs', billboard_songs_path(@billboard) %>

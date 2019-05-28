@@ -1,2 +1,11 @@
-<h1>Click a Song to View the Artist</h1>
+<h1>Click a Song</h1>
+
+<ul>
+<% @songs.each do |song| %>
+  <li><strong><%= song.rank %></strong> <%= link_to song.title, [@billboard, @song] %> 
+  </li>
+  <% end %> 
+  </ul>
+
+<%= link_to 'Create Song', new_billboard_song_path %>
 

@@ -1,8 +1,11 @@
-<%= form_for [@billboard, song] do |f| %>
+<%= @song.id ? 'Create' : 'Edit' %>
+
+<%= form_for [@billboard, @song] do |f| %>
     <div class="field">
     <%= f.label :rank, "Rank" %>
     <%= f.text_field :rank %>
     </div>
+
     <div class="field">
     <%= f.label :title, "Title" %>
     <%= f.text_field :title %>

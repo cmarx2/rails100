@@ -51,6 +51,6 @@ private
   end
 
   def song_params
-    params.require(:song).permit(:title, :rank)
+    params.require(:song).permit(:rank, :title)
   end
 end
