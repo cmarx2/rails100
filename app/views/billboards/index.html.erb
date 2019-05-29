@@ -1,8 +1,11 @@
 <h1>Billboards</h1>
 
 <% @billboards.each do |billboard| %>
-  <p><%= link_to billboard.chart, billboard%></p>
+  <p><%= link_to billboard.chart, billboard_songs_path(billboard)%></p>
   <% end %>
 
  <%= link_to 'New Chart', new_billboard_path%>
- 
+
+ <%= link_to 'Edit Chart', new_billboard_path %>
+
+ <%= link_to 'Delete Chart', @billboard, method: :delete %>

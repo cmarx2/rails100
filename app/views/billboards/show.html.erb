@@ -1,5 +1,12 @@
 <h1><%= @billboard.chart %></h1>
 
+<ul>
+<% @songs.each do |song| %>
+  <li><strong><%= song.rank %></strong> <%= link_to song.title, [@billboard, song] %> 
+  </li>
+  <% end %> 
+  </ul>
+
 <p>What would you like to do?</p>
   <%= link_to 'View Songs', billboard_songs_path(@billboard) %>
   <br />

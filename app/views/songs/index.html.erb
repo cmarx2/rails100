@@ -1,11 +1,11 @@
 <h1>Click a Song</h1>
 
-<ul>
-<% @songs.each do |song| %>
-  <li><strong><%= song.rank %></strong> <%= link_to song.title, [@billboard, song] %> 
-  </li>
-  <% end %> 
-  </ul>
 
-<%= link_to 'Create Song', new_billboard_song_path %>
+<% @songs.each do |song| %>
+  <p><strong><%= song.rank %></strong> <%= link_to song.title, billboard_song_path(@billboard, song) %><p> 
+  
+  <% end %> 
+ 
+
+<%= link_to 'Create Song', new_billboard_song_path(@billboard) %>
 

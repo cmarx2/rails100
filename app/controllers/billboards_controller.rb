@@ -1,7 +1,7 @@
 class BillboardsController < ApplicationController
   before_action :set_billboard, only: [ :show, :update, :edit, :destroy]
   def index
-    @billboards = Billboard.all
+    @billboards = Billboard.all.order(:chart)
   end
 
   def show
@@ -9,7 +9,7 @@ class BillboardsController < ApplicationController
 
   def new
     @billboard = Billboard.new
-    render partial: "form"
+    render partial: 'form'
   end
 
   def edit

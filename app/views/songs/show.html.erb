@@ -1,6 +1,6 @@
 <h1><%= @billboard.chart %> - <%= @song.title %></h1>
 
-<p><%= @song.rank%>. <%= @song.title %>
+<p><%= @song.rank%>. <%= @song.title %></p>
 
 <%= link_to 'Edit Song', edit_billboard_song_path([@billboard, @song]) %>
 
@@ -9,5 +9,5 @@
 <%= link_to 'Back To Songs', billboard_songs_path(@billboard) %>
 
 <div>
-<%= link_to 'View Artist', song_artists_path(@song) %>
+<%= link_to 'View Artist', song_artist_path([@song, @artist]) %>
 </div>
