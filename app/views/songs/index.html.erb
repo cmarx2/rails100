@@ -1,4 +1,5 @@
-<h1>Click a Song</h1>
+<h1> <%= "#{@billboard.chart}" %> </h1>
+<h3> Click a song for more details </h3>
 
 
 <% @songs.each do |song| %>
@@ -8,6 +9,12 @@
  
 
 <%= link_to 'Create Song', new_billboard_song_path(@billboard) %>
+
+<%= link_to 'Billboard List', root_path %>
+
+<%= link_to 'Edit Chart', edit_billboard_path(@billboard) %> 
+
+ <%= link_to 'Delete Chart', @billboard, method: :delete %>
 
 
 

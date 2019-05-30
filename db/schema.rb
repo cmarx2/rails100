@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_211900) do
     t.bigint "song_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    # add migration column here
     t.index ["song_id"], name: "index_artists_on_song_id"
   end
 
