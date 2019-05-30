@@ -33,7 +33,7 @@ class BillboardsController < ApplicationController
     end
   end
 
-  def destroy
+  def delete
     @billboard.destroy
     redirect_to billboards_path
   end
