@@ -7,8 +7,8 @@ class SongsController < ApplicationController
     @songs = @billboard.songs.order(:rank)
   end
 
-  def show
-    
+  def showslahdfls
+  
   end
 
   def new
